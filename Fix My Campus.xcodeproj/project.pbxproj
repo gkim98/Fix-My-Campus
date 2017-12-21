@@ -18,6 +18,9 @@
 		E554787A1FEA02DD000852C7 /* Fix_My_CampusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478791FEA02DD000852C7 /* Fix_My_CampusUITests.swift */; };
 		E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554788A1FEA0B4C000852C7 /* MapViewController.swift */; };
 		E554788D1FEA0C25000852C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E554788C1FEA0C25000852C7 /* Main.storyboard */; };
+		E554789C1FEBEEF2000852C7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554789B1FEBEEF2000852C7 /* PostsViewController.swift */; };
+		E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554789E1FEBF1BF000852C7 /* PostsCell.swift */; };
+		E55478A11FEBF1BF000852C7 /* PostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E554789F1FEBF1BF000852C7 /* PostsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		E554787B1FEA02DD000852C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E554788A1FEA0B4C000852C7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E554788C1FEA0C25000852C7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E554789B1FEBEEF2000852C7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostsViewController.swift; path = "/Users/grantkim/Desktop/Fix My Campus/Fix My Campus/Controller/PostsViewController.swift"; sourceTree = "<absolute>"; };
+		E554789E1FEBF1BF000852C7 /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
+		E554789F1FEBF1BF000852C7 /* PostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsCell.xib; sourceTree = "<group>"; };
 		EFF83C91F4620124AEB06B88 /* Pods-Fix My CampusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fix My CampusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fix My CampusTests/Pods-Fix My CampusTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,7 @@
 			children = (
 				E55478621FEA02DD000852C7 /* LaunchScreen.storyboard */,
 				E554788C1FEA0C25000852C7 /* Main.storyboard */,
+				E554789D1FEBF183000852C7 /* Custom Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,10 +193,20 @@
 		E55478891FEA02FA000852C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E554789B1FEBEEF2000852C7 /* PostsViewController.swift */,
 				E55478561FEA02DD000852C7 /* AppDelegate.swift */,
 				E554788A1FEA0B4C000852C7 /* MapViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E554789D1FEBF183000852C7 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E554789E1FEBF1BF000852C7 /* PostsCell.swift */,
+				E554789F1FEBF1BF000852C7 /* PostsCell.xib */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +328,7 @@
 				E554788D1FEA0C25000852C7 /* Main.storyboard in Resources */,
 				E55478641FEA02DD000852C7 /* LaunchScreen.storyboard in Resources */,
 				E55478611FEA02DD000852C7 /* Assets.xcassets in Resources */,
+				E55478A11FEBF1BF000852C7 /* PostsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +505,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E554789C1FEBEEF2000852C7 /* PostsViewController.swift in Sources */,
+				E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */,
 				E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */,
 				E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */,
 				E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */,

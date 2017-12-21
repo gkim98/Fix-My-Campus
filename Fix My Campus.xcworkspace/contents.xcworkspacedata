@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/grantkim/Desktop/Fix My Campus/Fix My Campus/Controller/PostsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Fix My Campus.xcodeproj">
    </FileRef>
    <FileRef
