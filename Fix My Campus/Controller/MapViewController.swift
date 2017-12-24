@@ -7,42 +7,54 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var tableViewContainer: UIView!
+class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapTableView: UITableView!
-    @IBOutlet weak var mapContainer: UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        mapView.camera = camera
+        mapView.delegate = self
+
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.map = mapView
+    
         mapTableView.delegate = self
         mapTableView.dataSource = self
-
-        
         mapTableView.register(UINib(nibName: "PostsCell", bundle: nil), forCellReuseIdentifier: "postsCell")
         
     }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print("a marker was tapped")
+        marker.opacity = 0.6
+        return true
+    }
 
+    
+    //MARK: - Methods for the table view functionality
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postsCell", for: indexPath) as! PostsCell
-        
+
         //test
         let postsArray = ["One", "Two", "Three"]
-        
+
         cell.messageLabel.text = postsArray[indexPath.row]
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+   
 }
+
