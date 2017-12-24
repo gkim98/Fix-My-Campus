@@ -21,6 +21,7 @@
 		E554789C1FEBEEF2000852C7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554789B1FEBEEF2000852C7 /* PostsViewController.swift */; };
 		E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554789E1FEBF1BF000852C7 /* PostsCell.swift */; };
 		E55478A11FEBF1BF000852C7 /* PostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E554789F1FEBF1BF000852C7 /* PostsCell.xib */; };
+		E55478A31FEC03CF000852C7 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478A21FEC03CF000852C7 /* GoogleMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E554789B1FEBEEF2000852C7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostsViewController.swift; path = "/Users/grantkim/Desktop/Fix My Campus/Fix My Campus/Controller/PostsViewController.swift"; sourceTree = "<absolute>"; };
 		E554789E1FEBF1BF000852C7 /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		E554789F1FEBF1BF000852C7 /* PostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsCell.xib; sourceTree = "<group>"; };
+		E55478A21FEC03CF000852C7 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		EFF83C91F4620124AEB06B88 /* Pods-Fix My CampusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fix My CampusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fix My CampusTests/Pods-Fix My CampusTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				E554789B1FEBEEF2000852C7 /* PostsViewController.swift */,
 				E55478561FEA02DD000852C7 /* AppDelegate.swift */,
 				E554788A1FEA0B4C000852C7 /* MapViewController.swift */,
+				E55478A21FEC03CF000852C7 /* GoogleMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 			files = (
 				E554789C1FEBEEF2000852C7 /* PostsViewController.swift in Sources */,
 				E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */,
+				E55478A31FEC03CF000852C7 /* GoogleMapViewController.swift in Sources */,
 				E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */,
 				E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */,
 				E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */,
