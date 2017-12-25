@@ -20,7 +20,7 @@
 		E554788D1FEA0C25000852C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E554788C1FEA0C25000852C7 /* Main.storyboard */; };
 		E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554789E1FEBF1BF000852C7 /* PostsCell.swift */; };
 		E55478A11FEBF1BF000852C7 /* PostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E554789F1FEBF1BF000852C7 /* PostsCell.xib */; };
-		E55478EB1FEFC7D2000852C7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478EA1FEFC7D1000852C7 /* PostsViewController.swift */; };
+		E55478F01FF0E3F5000852C7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478EF1FF0E3F5000852C7 /* PostsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		E554788C1FEA0C25000852C7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E554789E1FEBF1BF000852C7 /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		E554789F1FEBF1BF000852C7 /* PostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsCell.xib; sourceTree = "<group>"; };
-		E55478EA1FEFC7D1000852C7 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewController.swift; path = ../../PostsViewController.swift; sourceTree = "<group>"; };
+		E55478EF1FF0E3F5000852C7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		EFF83C91F4620124AEB06B88 /* Pods-Fix My CampusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fix My CampusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fix My CampusTests/Pods-Fix My CampusTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,9 +193,9 @@
 		E55478891FEA02FA000852C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E55478EA1FEFC7D1000852C7 /* PostsViewController.swift */,
 				E55478561FEA02DD000852C7 /* AppDelegate.swift */,
 				E554788A1FEA0B4C000852C7 /* MapViewController.swift */,
+				E55478EF1FF0E3F5000852C7 /* PostsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,8 +508,8 @@
 				E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */,
 				E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */,
 				E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */,
-				E55478EB1FEFC7D2000852C7 /* PostsViewController.swift in Sources */,
 				E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */,
+				E55478F01FF0E3F5000852C7 /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
