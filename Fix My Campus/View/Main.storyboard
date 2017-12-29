@@ -79,7 +79,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButton:" destination="4rK-r2-k2E" eventType="touchUpInside" id="DhP-74-x3z"/>
+                                    <action selector="submitButtonPressed:" destination="4rK-r2-k2E" eventType="touchUpInside" id="T2Y-9D-h8A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-a7-gF9">
@@ -90,7 +90,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelButton:" destination="4rK-r2-k2E" eventType="touchUpInside" id="JFt-9d-bxl"/>
+                                    <action selector="cancelButtonPressed:" destination="4rK-r2-k2E" eventType="touchUpInside" id="QIo-Ii-gWE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-jI-vL1">
@@ -103,8 +103,10 @@
                     </view>
                     <connections>
                         <outlet property="addPostImage" destination="JDx-jI-vL1" id="CH7-oF-Keo"/>
+                        <outlet property="cancelButton" destination="Wd4-a7-gF9" id="8Mr-Hu-TlY"/>
                         <outlet property="problemBodyTextField" destination="gIT-eK-eD7" id="fOY-R7-Eps"/>
                         <outlet property="problemTitleTextField" destination="rfR-Hf-hN9" id="cvp-KW-50Q"/>
+                        <outlet property="submitButton" destination="IDy-Co-GYU" id="QcS-si-pvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dt-Dr-DMI" userLabel="First Responder" sceneMemberID="firstResponder"/>

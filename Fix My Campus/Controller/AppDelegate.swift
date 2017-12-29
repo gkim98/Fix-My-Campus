@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyBI7lZ_LeCqJJLAEJ8lD2Y1279UWYSjR9I")
         FirebaseApp.configure()
         
-        let myDatabase = Database.database().reference()
-        myDatabase.setValue("test")
-        
         return true
     }
 

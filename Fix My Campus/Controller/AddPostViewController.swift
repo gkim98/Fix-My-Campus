@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var addPostImage: UIImageView!
     @IBOutlet weak var problemTitleTextField: UITextField!
     @IBOutlet weak var problemBodyTextField: UITextView!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +25,15 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         addPostImage.addGestureRecognizer(imageGesture)
     }
     
+    
     //MARK: - text
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // collapses keyboard
         self.view.endEditing(true)
     }
     
-    
-    // add some kind of field for if the post actually has an image --> changes the type of view controller that is presented
     
     
     //MARK: - image picker
@@ -42,6 +46,7 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         present(controller, animated: true, completion: nil)
     }
     
+    // add some field for picture not chosen --> picture = false
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
         dismiss(animated: true, completion: nil)
@@ -49,6 +54,7 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
+        // changes default image to chosen image
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         addPostImage.image = image
         
@@ -57,10 +63,44 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     //MARK: - cancel and submit
-    @IBAction func submitButton(_ sender: UIButton) {
+    
+    @IBAction func submitButtonPressed(_ sender: UIButton) {
+        // collapses keyboard if submit is pressed
+        problemBodyTextField.endEditing(true)
+        problemTitleTextField.endEditing(true)
+        
+        // UI components can not be interacted with if submit is pressed
+        problemTitleTextField.isEnabled = false
+        problemBodyTextField.isEditable = false
+        submitButton.isEnabled = false
+        cancelButton.isEnabled = false
+        
+        // saves the post to the database
+        let postsDB = Database.database().reference().child("Posts")
+        
+        let postsDictionary = [
+            "Sender": "Jim",
+            "Title": problemTitleTextField.text!,
+            "Body": problemBodyTextField.text!
+        ]
+        
+        postsDB.childByAutoId().setValue(postsDictionary) {
+            (error, reference) in
+
+            if error != nil {
+                print(error!)
+            } else {
+                print("post successfully recorded")
+            }
+        }
+        
+        // dismisses the modal view controller
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelButton(_ sender: UIButton) {
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        
+        // collapses view of modal view controller
         self.dismiss(animated: true, completion: nil)
     }
     
