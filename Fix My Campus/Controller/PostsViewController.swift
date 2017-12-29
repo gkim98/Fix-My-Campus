@@ -19,6 +19,8 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         postsTableView.dataSource = self
         
         postsTableView.register(UINib(nibName: "PostsCell", bundle: nil), forCellReuseIdentifier: "postsCell")
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

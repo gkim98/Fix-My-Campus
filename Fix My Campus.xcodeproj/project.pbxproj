@@ -10,6 +10,10 @@
 		39BEC0B8E8F25671DA9E3874 /* Pods_Fix_My_CampusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE8E29167DA83FBACE0BD94 /* Pods_Fix_My_CampusUITests.framework */; };
 		D37775D587241ACE5716E1CF /* Pods_Fix_My_Campus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2D2A3DA5DB56F7F2A337A6 /* Pods_Fix_My_Campus.framework */; };
 		E3DB8C0491C29F7D64920ED1 /* Pods_Fix_My_CampusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB5479E35B3D40B0CB56B97 /* Pods_Fix_My_CampusTests.framework */; };
+		E52DAC5E1FF634B900C03DCF /* PostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DAC5D1FF634B900C03DCF /* PostInfoViewController.swift */; };
+		E52DAC601FF63A9B00C03DCF /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DAC5F1FF63A9B00C03DCF /* AddPostViewController.swift */; };
+		E52DAC621FF63B4700C03DCF /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E52DAC611FF63B4600C03DCF /* defaultImage.jpg */; };
+		E52DAC641FF651BB00C03DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E52DAC631FF651BB00C03DCF /* GoogleService-Info.plist */; };
 		E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478561FEA02DD000852C7 /* AppDelegate.swift */; };
 		E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E554785D1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld */; };
 		E55478611FEA02DD000852C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55478601FEA02DD000852C7 /* Assets.xcassets */; };
@@ -49,6 +53,10 @@
 		9DB5479E35B3D40B0CB56B97 /* Pods_Fix_My_CampusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fix_My_CampusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C44E0A33912979AE6FF2E5 /* Pods-Fix My Campus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fix My Campus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fix My Campus/Pods-Fix My Campus.release.xcconfig"; sourceTree = "<group>"; };
 		A98F482E17B08E7D7F1CBDC9 /* Pods-Fix My Campus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fix My Campus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fix My Campus/Pods-Fix My Campus.debug.xcconfig"; sourceTree = "<group>"; };
+		E52DAC5D1FF634B900C03DCF /* PostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfoViewController.swift; sourceTree = "<group>"; };
+		E52DAC5F1FF63A9B00C03DCF /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		E52DAC611FF63B4600C03DCF /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
+		E52DAC631FF651BB00C03DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E55478531FEA02DD000852C7 /* Fix My Campus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fix My Campus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55478561FEA02DD000852C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E554785E1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fix_My_Campus.xcdatamodel; sourceTree = "<group>"; };
@@ -149,7 +157,9 @@
 				E55478881FEA02F4000852C7 /* View */,
 				E55478891FEA02FA000852C7 /* Controller */,
 				E55478601FEA02DD000852C7 /* Assets.xcassets */,
+				E52DAC611FF63B4600C03DCF /* defaultImage.jpg */,
 				E55478651FEA02DD000852C7 /* Info.plist */,
+				E52DAC631FF651BB00C03DCF /* GoogleService-Info.plist */,
 				E554785D1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld */,
 			);
 			path = "Fix My Campus";
@@ -196,6 +206,8 @@
 				E55478561FEA02DD000852C7 /* AppDelegate.swift */,
 				E554788A1FEA0B4C000852C7 /* MapViewController.swift */,
 				E55478EF1FF0E3F5000852C7 /* PostsViewController.swift */,
+				E52DAC5D1FF634B900C03DCF /* PostInfoViewController.swift */,
+				E52DAC5F1FF63A9B00C03DCF /* AddPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E554788D1FEA0C25000852C7 /* Main.storyboard in Resources */,
+				E52DAC641FF651BB00C03DCF /* GoogleService-Info.plist in Resources */,
 				E55478641FEA02DD000852C7 /* LaunchScreen.storyboard in Resources */,
 				E55478611FEA02DD000852C7 /* Assets.xcassets in Resources */,
+				E52DAC621FF63B4700C03DCF /* defaultImage.jpg in Resources */,
 				E55478A11FEBF1BF000852C7 /* PostsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,9 +473,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fix My Campus/Pods-Fix My Campus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,11 +528,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52DAC5E1FF634B900C03DCF /* PostInfoViewController.swift in Sources */,
 				E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */,
 				E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */,
 				E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */,
 				E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */,
 				E55478F01FF0E3F5000852C7 /* PostsViewController.swift in Sources */,
+				E52DAC601FF63A9B00C03DCF /* AddPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

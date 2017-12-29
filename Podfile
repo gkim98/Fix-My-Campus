@@ -10,6 +10,9 @@ target 'Fix My Campus' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
+    pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 
   target 'Fix My CampusTests' do
     inherit! :search_paths
