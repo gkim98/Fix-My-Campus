@@ -10,9 +10,11 @@ import Foundation
 
 class Post {
     
-    var sender: String = ""
+    var poster: String = ""
     var postTitle: String = ""
     var postBody: String = ""
     var isResolved: Bool = false
+    var datePosted: String = ""
+    
     
 }

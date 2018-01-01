@@ -9,27 +9,35 @@
 import UIKit
 
 class PostInfoViewController: UIViewController {
-
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var postTitleLabel: UILabel!
+    @IBOutlet weak var postBodyTextView: UITextView!
+    
+    var postsArray: [Post] = [Post]()
+    
+    // tells you which table cell was tapped
+    var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateUI() {
+        let post = postsArray[index]
+        
+        userNameLabel.text = post.poster
+        dateLabel.text = post.datePosted
+        postTitleLabel.text = post.postTitle
+        postBodyTextView.text = post.postBody
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
     }
-    */
-
 }

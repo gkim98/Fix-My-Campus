@@ -39,12 +39,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
     
     //MARK: - Methods for the table view functionality
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "postsCell", for: indexPath) as! PostsCell
-
-        //test
-        let postsArray = ["One", "Two", "Three"]
-
-        cell.messageLabel.text = postsArray[indexPath.row]
         return cell
     }
 

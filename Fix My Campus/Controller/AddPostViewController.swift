@@ -79,10 +79,12 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         let postsDB = Database.database().reference().child("Posts")
         
         let postsDictionary = [
-            "Sender": "Jim",
-            "Title": problemTitleTextField.text!,
-            "Body": problemBodyTextField.text!
-        ]
+            "Poster": "Jim",
+            "Post Title": problemTitleTextField.text!,
+            "Post Body": problemBodyTextField.text!,
+            "Resolved": false,
+            "Date Posted": "January 1st, 2018"
+            ] as [String : Any]
         
         postsDB.childByAutoId().setValue(postsDictionary) {
             (error, reference) in
