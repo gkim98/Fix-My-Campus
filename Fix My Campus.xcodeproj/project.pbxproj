@@ -14,6 +14,8 @@
 		E52DAC601FF63A9B00C03DCF /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DAC5F1FF63A9B00C03DCF /* AddPostViewController.swift */; };
 		E52DAC621FF63B4700C03DCF /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E52DAC611FF63B4600C03DCF /* defaultImage.jpg */; };
 		E52DAC641FF651BB00C03DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E52DAC631FF651BB00C03DCF /* GoogleService-Info.plist */; };
+		E52DAD771FFA749D00C03DCF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DAD761FFA749D00C03DCF /* Post.swift */; };
+		E52DAD791FFA75B100C03DCF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DAD781FFA75B100C03DCF /* Location.swift */; };
 		E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55478561FEA02DD000852C7 /* AppDelegate.swift */; };
 		E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E554785D1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld */; };
 		E55478611FEA02DD000852C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55478601FEA02DD000852C7 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		E52DAC5F1FF63A9B00C03DCF /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		E52DAC611FF63B4600C03DCF /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
 		E52DAC631FF651BB00C03DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E52DAD761FFA749D00C03DCF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E52DAD781FFA75B100C03DCF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E55478531FEA02DD000852C7 /* Fix My Campus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fix My Campus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55478561FEA02DD000852C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E554785E1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fix_My_Campus.xcdatamodel; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		E55478871FEA02E9000852C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E52DAD761FFA749D00C03DCF /* Post.swift */,
+				E52DAD781FFA75B100C03DCF /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -531,6 +537,8 @@
 				E52DAC5E1FF634B900C03DCF /* PostInfoViewController.swift in Sources */,
 				E55478A01FEBF1BF000852C7 /* PostsCell.swift in Sources */,
 				E554785F1FEA02DD000852C7 /* Fix_My_Campus.xcdatamodeld in Sources */,
+				E52DAD771FFA749D00C03DCF /* Post.swift in Sources */,
+				E52DAD791FFA75B100C03DCF /* Location.swift in Sources */,
 				E554788B1FEA0B4C000852C7 /* MapViewController.swift in Sources */,
 				E55478571FEA02DD000852C7 /* AppDelegate.swift in Sources */,
 				E55478F01FF0E3F5000852C7 /* PostsViewController.swift in Sources */,

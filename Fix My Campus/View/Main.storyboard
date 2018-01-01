@@ -39,7 +39,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AFS-kS-wSe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8gW-cl-D6g"/>
+                    <navigationItem key="navigationItem" id="8gW-cl-D6g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bnR-uo-8KN">
+                            <connections>
+                                <segue destination="4rK-r2-k2E" kind="presentation" id="Skc-L5-bdQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapTableView" destination="Da5-hY-RFA" id="zev-WC-qgr"/>
                         <outlet property="mapView" destination="HWG-J3-0m3" id="q2h-Qm-2x2"/>
@@ -132,14 +138,14 @@
                         <viewLayoutGuide key="safeArea" id="sRg-Nz-NPf"/>
                     </view>
                     <navigationItem key="navigationItem" id="mWs-or-SqA">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="RMS-DK-PZy">
-                            <connections>
-                                <segue destination="4rK-r2-k2E" kind="presentation" id="s3P-cy-8qj"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="zkm-av-hnt">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="zkm-av-hnt">
                             <connections>
                                 <segue destination="7ve-ej-tlm" kind="show" id="TOp-3u-5n8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RMS-DK-PZy">
+                            <connections>
+                                <segue destination="4rK-r2-k2E" kind="presentation" id="s3P-cy-8qj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -188,4 +194,7 @@
     <resources>
         <image name="defaultImage.jpg" width="900" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Skc-L5-bdQ"/>
+    </inferredMetricsTieBreakers>
 </document>
