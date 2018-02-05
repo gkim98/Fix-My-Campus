@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWG-J3-0m3" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="65" width="375" height="419"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="420"/>
                                 <color key="backgroundColor" red="0.79865287939999996" green="0.80851279149999999" blue="0.80851279149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-hY-RFA">
@@ -29,10 +29,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HWG-J3-0m3" firstAttribute="top" secondItem="AFS-kS-wSe" secondAttribute="top" id="2rm-Sp-yBm"/>
                             <constraint firstItem="Da5-hY-RFA" firstAttribute="trailing" secondItem="AFS-kS-wSe" secondAttribute="trailing" id="3pl-Lw-Eu0"/>
                             <constraint firstItem="Da5-hY-RFA" firstAttribute="bottom" secondItem="AFS-kS-wSe" secondAttribute="bottom" id="7mn-lg-hbm"/>
                             <constraint firstItem="Da5-hY-RFA" firstAttribute="leading" secondItem="AFS-kS-wSe" secondAttribute="leading" id="DZx-GE-Uzd"/>
+                            <constraint firstItem="HWG-J3-0m3" firstAttribute="trailing" secondItem="AFS-kS-wSe" secondAttribute="trailing" id="Lte-rC-6Ek"/>
                             <constraint firstItem="Da5-hY-RFA" firstAttribute="top" secondItem="HWG-J3-0m3" secondAttribute="bottom" id="Qc4-jj-TIB"/>
+                            <constraint firstItem="HWG-J3-0m3" firstAttribute="leading" secondItem="AFS-kS-wSe" secondAttribute="leading" id="aGP-Jr-Ro0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AFS-kS-wSe"/>
                     </view>

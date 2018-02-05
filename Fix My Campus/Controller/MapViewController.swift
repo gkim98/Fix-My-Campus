@@ -16,11 +16,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapTableView: UITableView!
     
+    let screenSize:CGRect = UIScreen.main.bounds
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
     
+    var markers: [GMSMarker] = []
     var likelyPlaces: [GMSPlace] = []
     var selectedPlace: GMSPlace?
     
@@ -28,34 +31,45 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLocationManager()
-        
         let defaultLocation = CLLocation(latitude: 0, longitude: 0)
         let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude, longitude: defaultLocation.coordinate.longitude, zoom: zoomLevel)
-        mapView.settings.myLocationButton = true
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        // mapView.isMyLocationEnabled = true
-        mapView.isHidden = true
         
+        setupLocationManager()
+        setupTableView()
+        
+        addMarker(xcoord: 36.003522, ycoord: -78.933009)
+        addMarker(xcoord: 36.002584, ycoord: -78.937000)
+        addMarker(xcoord: 36.000189, ycoord: -78.938502)
 
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.map = mapView
-    
-        mapTableView.delegate = self
-        mapTableView.dataSource = self
-        mapTableView.register(UINib(nibName: "PostsCell", bundle: nil), forCellReuseIdentifier: "postsCell")
         
     }
     
+    
+    
+    
+    //MARK: - Methods for marker functionality
+    func addMarker(xcoord: CLLocationDegrees, ycoord: CLLocationDegrees) {
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: xcoord, longitude: ycoord)
+        marker.map = mapView
+        markers.append(marker)
+    }
+
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        print("a marker was tapped")
+        mapView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height * 0.7)
         marker.opacity = 0.6
         return true
     }
-
+    
+    
     
     //MARK: - Methods for the table view functionality
+    func setupTableView() {
+        mapTableView.delegate = self
+        mapTableView.dataSource = self
+        mapTableView.register(UINib(nibName: "PostsCell", bundle: nil), forCellReuseIdentifier: "postsCell")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "postsCell", for: indexPath) as! PostsCell
@@ -71,6 +85,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
     }
     
     
+    
     //MARK: - Location Manager
     // configuration for location manager and other setup for the map
     func setupLocationManager() {
@@ -83,6 +98,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         placesClient = GMSPlacesClient.shared()
+        
+        mapView.settings.myLocationButton = true
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        // mapView.isMyLocationEnabled = true
+        mapView.isHidden = true
     }
     
     // handles events for the location manager
