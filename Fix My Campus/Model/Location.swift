@@ -11,7 +11,8 @@ import Foundation
 class Location {
     
     var name: String = ""
+    var xCoord: Int = 0
+    var yCoord: Int = 0
     var posts: [Post] = [Post]()
     
-    // add a coordinates variable
 }
