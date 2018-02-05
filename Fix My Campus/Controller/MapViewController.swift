@@ -29,6 +29,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UITableViewDelega
         super.viewDidLoad()
         
         setupLocationManager()
+        
+        let defaultLocation = CLLocation(latitude: 0, longitude: 0)
+        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude, longitude: defaultLocation.coordinate.longitude, zoom: zoomLevel)
+        mapView.settings.myLocationButton = true
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        // mapView.isMyLocationEnabled = true
+        mapView.isHidden = true
+        
 
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
